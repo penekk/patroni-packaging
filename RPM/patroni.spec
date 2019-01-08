@@ -2,11 +2,11 @@
 %define        INSTALLPATH /opt/app/patroni
 %define debug_package %{nil}
 Name:          patroni
-Version:       1.5.0
+Version:       1.5.3
 Release:       1.rhel7
 License:       MIT
 Summary:       PostgreSQL high-availability manager
-Source:        patroni-1.5.0.tar.gz
+Source:        patroni-1.5.3.tar.gz
 Source1:       patroni-customizations.tar.gz
 Patch0:        service-info-only-in-pretty-format.patch
 Patch1:        patronictl-reinit-wait.patch
@@ -83,6 +83,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(664, root, root) /lib/systemd/system/patroni-watchdog.service
 
 %changelog
+* Tue Jan 8 2019 Andrzej Penkowski 1.5.3-1.rhel7
+- Update to 1.5.3
+- patronictl-reinit-wait.patch touchup following changes in
+  https://github.com/zalando/patroni/pull/823/commits/cf70a44a13b10ceab95941ff991f3545dbd6425d
+
 * Fri Sep 21 2018 Ants Aasma 1.5.0-1.rhel7
 - Update to 1.5.0
 

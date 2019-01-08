@@ -76,9 +76,9 @@ diff --git a/tests/test_api.py b/tests/test_api.py
 index d4f0d97..25513e5 100644
 --- a/tests/test_api.py
 +++ b/tests/test_api.py
-@@ -91,6 +91,8 @@ class MockHa(object):
-     def is_paused():
-         return True
+@@ -98,6 +98,8 @@ class MockHa(object):
+     def is_standby_cluster():
+         return False
  
 +    action = None
 +
